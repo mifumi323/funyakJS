@@ -1,4 +1,7 @@
+.vs/
+Bin/
 obj/
 packages/
 scripts/
 *.suo
+*.user

@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{732661B6-2A27-488A-B5B1-EA2F2D575139}</ProjectGuid>
+    <ProjectGuid>{D23D543E-DFE5-4F3A-9485-4E75C14A0294}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MifuminSoft.funyak.View</RootNamespace>
-    <AssemblyName>funyak.View</AssemblyName>
+    <RootNamespace>MifuminSoft.funyak.Core</RootNamespace>
+    <AssemblyName>funyak.Core</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>
@@ -32,18 +32,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="MapView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\HtmlCore\HtmlCore.csproj">
-      <Project>{d23d543e-dfe5-4f3a-9485-4e75c14a0294}</Project>
-      <Name>HtmlCore</Name>
-    </ProjectReference>
-  </ItemGroup>
+  <Import Project="..\funyak\CoreCode\CoreCode.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\DuoCode.2.0.1542.0\build\DuoCode.targets" Condition="Exists('..\packages\DuoCode.2.0.1542.0\build\DuoCode.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
